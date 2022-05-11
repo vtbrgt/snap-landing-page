@@ -66,15 +66,62 @@ main button {
   padding: 0 0.8rem;
 }
 
-footer {
+.logos {
   margin: 2.5rem 0 4rem 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-footer img {
+.logo_patrocinador {
   width: 18%;
   max-width: 98px;
   height: 18%;
+}
+
+.hero_desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin: 2rem 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero_mobile {
+    display: none;
+  }
+
+  .conteudo {
+    padding-top: 4rem;
+  }
+
+  .textos {
+    text-align: left;
+  }
+
+  .textos h1 {
+    font-size: 98px;
+    margin-bottom: 2rem;
+  }
+
+  .textos p {
+    padding: 0;
+    margin-bottom: 2rem;
+    width: 65%;
+    line-height: 1.5;
+  }
+
+  .hero_desktop {
+    display: unset;
+    width: 50%;
+    padding-left: 8rem;
+  }
+
+  .logos {
+    padding-top: 10rem;
+    margin-bottom: 0;
+  }
 }
