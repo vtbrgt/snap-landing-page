@@ -42,23 +42,39 @@ a {
 }
 
 .nav.active .menu {
+  visibility: visible;
   display: flex;
   flex-direction: column;
+  width: 65%;
+  overflow-y: auto;
 }
 
-.btn_mobile {
+.botao_menu {
   display: flex;
+  width: 26px;
+  height: 26px;
+  background-image: url(./images/icon-menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+}
+
+.botao_menu.active {
+  background-image: url(./images/icon-close-menu.svg);
 }
 
 .menu {
-  /* display: none; */
+  display: block;
   position: absolute;
   background-color: white;
-  width: 65%;
+  width: 0%;
   height: 100vh;
   top: 60px;
   right: 0px;
+  transition: 0.6s;
   z-index: 1000;
+  visibility: hidden;
+  overflow-y: hidden;
 }
 
 .menu ul {
@@ -165,7 +181,7 @@ main button {
     justify-content: initial;
   }
 
-  .btn_mobile {
+  .botao_menu {
     display: none;
   }
 
@@ -176,6 +192,11 @@ main button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    visibility: initial;
+  }
+
+  .menu div:first-child {
+    padding-top: 2rem;
   }
 
   .menu ul {
@@ -184,6 +205,10 @@ main button {
 
   .cadastro {
     flex-direction: row;
+  }
+
+  .cadastro a {
+    font-size: 16px;
   }
 
   .registrar {
