@@ -1,9 +1,10 @@
 const botaoMenu = document.querySelector(".botao_menu");
+const nav = document.querySelector(".nav");
+const dropdown = document.getElementsByClassName("dropdown_btn");
 
 /* mostrar menu ao clicar */
 function mostraMenu(event) {
   if (event.type === "touchstart") event.preventDefault();
-  const nav = document.querySelector(".nav");
   nav.classList.toggle("active");
 }
 
@@ -26,3 +27,16 @@ window.addEventListener("resize", function () {
     nav.classList.remove("active");
   }
 });
+
+/* menu dropdown */
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "flex") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "flex";
+    }
+  });
+}
