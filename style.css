@@ -208,8 +208,19 @@ p:hover {
 }
 
 .atribuicao {
-  margin: 4rem 0 2rem 0;
+  margin: 4rem 1.5rem 2rem 1.5rem;
+  font-size: 16px;
   text-align: center;
+}
+
+.atribuicao a {
+  color: var(--preto);
+  text-decoration: underline;
+}
+
+.atribuicao p:hover {
+  color: var(--cinza);
+  cursor: initial;
 }
 
 @media (min-width: 1024px) {
