@@ -104,7 +104,7 @@ p:hover {
 .dropdown_btn {
   background-image: url(./images/icon-arrow-down.svg);
   background-repeat: no-repeat;
-  background-position: 42%;
+  background-position: 50%;
 }
 
 .dropdown_btn.active {
